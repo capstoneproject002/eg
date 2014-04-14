@@ -28,3 +28,7 @@ tr:
       format:
         format: "%u %n"
         unit: "₺"
+
+  dock:
+    users: Öğrenciler
+    dashboard: Pano

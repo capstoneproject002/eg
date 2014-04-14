@@ -33,8 +33,9 @@ gem 'capistrano-ext', '~> 1.2.1'
 gem 'unicorn', '~> 4.6.3'
 gem 'recipes_matic', '~> 1.0.0'
 gem 'aws-sdk', '~> 1.29.0'
+gem 'model_to_locale'
 
-# gem 'rails-observers'
+gem 'rails-observers'
 gem 'rails_best_practices', '~> 1.15.1'
 
 gem 'hierapolis-rails', '~> 0.4.0'

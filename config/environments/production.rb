@@ -78,21 +78,43 @@ Eg::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Mail Setting
+# Mail Setting
   config.action_mailer.default_url_options = { :host => 'eg.com' }
 
-
   config.action_mailer.delivery_method = :smtp
-config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.smtp_settings = Settings.smtp.mandrill
+  config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.smtp_settings = {
+      address: Settings.smtp.mandrill.address,
+      port: Settings.smtp.mandrill.port,
+      enable_starttls_auto: Settings.smtp.mandrill.enable_starttls_auto,
+      user_name: ENV['mandrill_user_name'],
+      password: ENV['mandrill_password'],
+      authentication: Settings.smtp.mandrill.authentication
+  }
+
+  # config.middleware.use ExceptionNotification::Rack,
+  #                       :email => {
+  #                           :email_prefix => "[Öğrenci Bilgi Sistemi] ",
+  #                           :sender_address => %{"notifier" <notifier@eg.com>},
+  #                           :exception_recipients => %w{developer@lab2023.com}
+  #                       }
 
 
-  
-  config.middleware.use ExceptionNotification::Rack,
-    :email => {
-      :email_prefix => "[Whatever] ",
-      :sender_address => %{"notifier" <notifier@example.com>},
-      :exception_recipients => %w{exceptions@example.com}
-    }
+  config.assets.precompile << Proc.new do |path|
+    if path =~ /\.(css|js)\z/
+      full_path = Rails.application.assets.resolve(path).to_path
+      app_assets_path = Rails.root.join('app', 'assets').to_path
+      if full_path.starts_with? app_assets_path
+        puts "including asset: " + full_path
+        true
+      else
+        puts "excluding asset: " + full_path
+        false
+      end
+    else
+      false
+    end
+  end
 
 end

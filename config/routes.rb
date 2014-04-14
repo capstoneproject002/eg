@@ -13,7 +13,9 @@ Eg::Application.routes.draw do
     # Routing for admin profile editing
     match '/profile', to: 'profile#edit', via: :get
     match '/profile', to: 'profile#update', via: [:patch, :put]
-      resources :dashboard, only: [:index]
+    resources :dashboard, only: [:index]
+    root to: 'dashboard#index'
+    resources :users, except: [:destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
