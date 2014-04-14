@@ -1,0 +1,8 @@
+.alert.alert-warning
+  %p
+  - if params[:q]
+    Hiç öğrenci bulunamadı.
+    = link_to 'Listeye Dön', hq_users_path
+  - else
+    Henüz hiç öğrenci eklenmemiş.
+    = link_to 'Öğrenci Ekle', new_hq_user_path, class: 'btn btn-default'

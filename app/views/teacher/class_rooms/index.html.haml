@@ -1,0 +1,5 @@
+.panel.panel-default.grid
+  =blankable(@class_rooms)
+  .panel-footer
+    .pagination.pagination-sm
+      = will_paginate @class_rooms, renderer: BootstrapPagination::Rails, bootstrap: 3

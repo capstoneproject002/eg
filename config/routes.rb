@@ -23,6 +23,12 @@ Eg::Application.routes.draw do
     resources :class_rooms
   end
 
+  namespace :teacher do
+    resources :dashboard, only: [:index]
+    resources :class_rooms, only: [:show, :index]
+    resources :users, only: [:show, :index]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

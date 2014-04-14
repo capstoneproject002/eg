@@ -20,4 +20,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def after_sign_in_path_for(resource)
+    if resource.class.name == 'User'
+      super
+    elsif resource.class.name == 'Admin'
+      hq_dashboard_index_path
+    elsif resource.class.name == 'Teacher'
+      teacher_dashboard_index_path
+    else
+      super
+    end
+  end
+
 end
