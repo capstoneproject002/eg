@@ -1,0 +1,21 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: ClassRoom.model_name.human)
+  .panel-tools
+    .btn-group
+      %a.btn{href: hq_class_rooms_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+        %i.icon-refresh
+    .badge= @class_rooms.total_entries
+.panel-body.filters
+
+%table.table
+  %thead
+    %tr
+      %th #
+      %th= t('activerecord.attributes.class_room.name')
+      %th= t('activerecord.attributes.class_room.teacher')
+      %th= t('activerecord.attributes.class_room.semester')
+      %th.actions
+
+  %tbody
+    = render @class_rooms

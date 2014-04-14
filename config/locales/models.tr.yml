@@ -7,6 +7,7 @@ tr:
       admin: Sistem Yöneticisi
       teacher: Öğretmen
       semester: Semester
+      class_room: Sınıf
     attributes:
       user:
         id: Id
@@ -64,3 +65,13 @@ tr:
         semester: Dönem
         created_at: rCreated_at
         updated_at: Updated_at
+      class_room:
+        id: Id
+        teacher_id: Öğretmen
+        teacher: Öğretmen
+        semester_id: Dönem
+        semester: Dönem
+        name: İsim
+        created_at: Created_at
+        updated_at: Updated_at
+        users: Öğrenciler

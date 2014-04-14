@@ -34,6 +34,7 @@ tr:
     dashboard: Pano
     teachers: Öğretmenler
     semesters: Dönemler
+    class_rooms: Sınıflar
 
   enumerize:
     semester:

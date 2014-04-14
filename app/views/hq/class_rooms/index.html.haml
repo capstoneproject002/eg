@@ -1,0 +1,10 @@
+- content_for :toolbar do
+  = link_to new_hq_class_room_path, class: 'btn btn-default' do
+    %i.icon-plus
+    = t('action_button.new', resource_name: ClassRoom.model_name.human)
+
+.panel.panel-default.grid
+  =blankable(@class_rooms)
+  .panel-footer
+    .pagination.pagination-sm
+      = will_paginate @class_rooms, renderer: BootstrapPagination::Rails, bootstrap: 3

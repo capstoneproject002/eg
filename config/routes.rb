@@ -20,6 +20,7 @@ Eg::Application.routes.draw do
     resources :users, except: [:destroy]
     resources :teachers, except: [:destroy]
     resources :semesters
+    resources :class_rooms
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
