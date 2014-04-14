@@ -6,6 +6,7 @@ tr:
       user: Öğrenci
       admin: Sistem Yöneticisi
       teacher: Öğretmen
+      semester: Semester
     attributes:
       user:
         id: Id
@@ -55,4 +56,11 @@ tr:
         name: İsim
         calendar: Takvim
         created_at: Oluşturulma Tarihi
+        updated_at: Updated_at
+      semester:
+        id: Id
+        name: İsim
+        year: Yıl
+        semester: Dönem
+        created_at: rCreated_at
         updated_at: Updated_at

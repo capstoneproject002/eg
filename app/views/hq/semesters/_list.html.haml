@@ -1,0 +1,21 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: Semester.model_name.human)
+  .panel-tools
+    .btn-group
+      %a.btn{href: hq_semesters_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+        %i.icon-refresh
+    .badge= @semesters.total_entries
+.panel-body.filters
+  -#= render 'filters'
+%table.table
+  %thead
+    %tr
+      %th #
+      %th= t('activerecord.attributes.semester.name')
+      %th= t('activerecord.attributes.semester.year')
+      %th= t('activerecord.attributes.semester.semester')
+      %th.actions
+
+  %tbody
+    = render @semesters

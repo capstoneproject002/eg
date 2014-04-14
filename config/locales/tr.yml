@@ -33,3 +33,10 @@ tr:
     users: Öğrenciler
     dashboard: Pano
     teachers: Öğretmenler
+    semesters: Dönemler
+
+  enumerize:
+    semester:
+      first: Birinci Dönem
+      second: İkinci Dönem
+      summer: Yaz Dönemi

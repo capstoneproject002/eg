@@ -1,0 +1,8 @@
+.alert.alert-warning
+  %p
+  - if params[:q]
+    Hiç öğrenci bulunamadı.
+    = link_to 'Listeye Dön', hq_teachers_path
+  - else
+    Henüz hiç dönem eklenmemiş.
+    = link_to 'Dönem Ekle', new_hq_semester_path, class: 'btn btn-default'
