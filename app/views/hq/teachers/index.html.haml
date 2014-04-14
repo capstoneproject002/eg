@@ -1,0 +1,9 @@
+- content_for :toolbar do
+  = link_to new_hq_teacher_path, class: 'btn btn-default' do
+    %i.icon-plus
+    = t('action_button.new', resource_name: Teacher.model_name.human)
+.panel.panel-default.grid
+  =blankable(@teachers)
+  .panel-footer
+    .pagination.pagination-sm
+      = will_paginate @teachers, renderer: BootstrapPagination::Rails, bootstrap: 3

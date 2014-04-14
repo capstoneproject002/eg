@@ -1,0 +1,22 @@
+- content_for :toolbar do
+  = link_to edit_hq_teacher_path(@teacher), class: 'btn btn-default' do
+    %i.icon-plus
+    = t('action_button.edit', resource_name: Teacher.model_name.human)
+.row
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        %i.icon-user.icon-large
+        Öğretmen Bilgileri
+      .panel-body
+        = show_for @teacher do |s|
+          = s.attribute :email
+          = s.attribute :name
+  .col-md-6
+    .panel.panel-default.grid
+      .panel-heading
+        %i.icon-list.icon-large
+        Verdiği Dersler
+
+      %table.table
+        %tbody
