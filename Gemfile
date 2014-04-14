@@ -61,3 +61,4 @@ end
 gem 'rails_12factor', group: :production
 gem 'enumerize'
 gem 'select2-rails'
+gem 'link_to_active_state'

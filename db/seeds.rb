@@ -9,4 +9,4 @@
 
 Admin.create(email: 'admin@admin.com', password: '12341234', password_confirmation: '12341234')
 
-User.create(name: 'New Student', password: '12341234', password_confirmation: '12341234', email: 'student@student.com')
+User.create!(name: 'New Student', password: '12341234', password_confirmation: '12341234', email: 'student@student.com')

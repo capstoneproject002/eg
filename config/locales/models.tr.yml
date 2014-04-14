@@ -26,6 +26,9 @@ tr:
         password: Şifre
         updated_at: Updated_at
         time_zone: Time_zone
+        remember_me: Beni Hatırla
+        password: Şifre
+        password_confirmation: Şifre Tekrarı
       admin:
         id: Id
         email: Eposta
@@ -58,6 +61,8 @@ tr:
         calendar: Takvim
         created_at: Oluşturulma Tarihi
         updated_at: Updated_at
+        password: Şifre
+        remember_me: Beni Hatırla
       semester:
         id: Id
         name: İsim
