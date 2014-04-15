@@ -1,5 +1,8 @@
 Eg::Application.routes.draw do
 
+
+  resources :attachments
+
   resources :class_rooms, only: [:show, :index]
 
   devise_for :teachers
@@ -13,6 +16,7 @@ Eg::Application.routes.draw do
   match '/profile', to: 'profile#edit', via: :get
   match '/profile', to: 'profile#update', via: [:patch, :put]
 
+  resources :announcements
   namespace :hq do
     # Routing for admin profile editing
     match '/profile', to: 'profile#edit', via: :get
@@ -23,12 +27,15 @@ Eg::Application.routes.draw do
     resources :teachers, except: [:destroy]
     resources :semesters
     resources :class_rooms
+    resources :messages
   end
 
   namespace :teacher do
     resources :dashboard, only: [:index]
     resources :class_rooms, only: [:show, :index]
+    resources :class_rooms_users, only: [:edit, :update]
     resources :users, only: [:show, :index]
+    resources :announcements
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -11,6 +11,9 @@ class Teacher < ActiveRecord::Base
 
   before_create :set_password
 
+  has_many :announcements
+  has_many :class_rooms
+
   def set_password
     if Rails.env.production?
       generated_password = Devise.friendly_token.first(8)

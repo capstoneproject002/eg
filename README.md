@@ -9,5 +9,5 @@
 ### Kullanıcı Giriş Bilgileri
 * [http://agile-thicket-8353.herokuapp.com/users/sign_in](http://agile-thicket-8353.herokuapp.com/users/sign_in)
 * student@student.com
-* 12341234
+* 7nyawQwF
 

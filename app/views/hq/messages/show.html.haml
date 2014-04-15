@@ -1,0 +1,10 @@
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = t('tt.show', resource_name: Message.model_name.human)
+  .panel-body
+    = show_for @message do |s|
+      = s.attribute :title
+      = s.attribute :receiver do
+        = @message.receiver.text
+      = s.attribute :content

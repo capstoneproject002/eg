@@ -28,6 +28,6 @@ module Eg
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.sass.preferred_syntax = :sass
 
-    config.active_record.observers = :user_observer, :teacher_observer
+    config.active_record.observers = :user_observer, :teacher_observer, :message_observer
   end
 end

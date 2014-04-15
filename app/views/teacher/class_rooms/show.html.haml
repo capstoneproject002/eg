@@ -1,5 +1,5 @@
 .row
-  .col-lg-6
+  .col-lg-4
     .panel.panel-default
       .panel-heading
         %i.icon-edit.icon-large
@@ -9,7 +9,7 @@
           = s.association :teacher
           = s.association :semester
           = s.attribute :name
-  .col-lg-6
+  .col-lg-8
     .panel.panel-default
       .panel-heading
         %i.icon-edit.icon-large
@@ -20,9 +20,52 @@
             %tr
               -#%th #
               %th= t('activerecord.attributes.user.name')
-              %th= t('activerecord.attributes.user.email')
-              %th= t('activerecord.attributes.user.created_at')
+              %th= t('activerecord.attributes.class_room.gpa')
+              %th= t('activerecord.attributes.class_room.score')
+              %th= t('activerecord.attributes.class_room.attendance')
               %th.actions
 
           %tbody
-            = render @class_room.users
+            - @class_room.users.each do |user|
+              - class_room_user = user.class_room_user_by_class_room(@class_room)
+              %tr
+                %td= user.name
+                %td= class_room_user.gpa
+                %td= class_room_user.score
+                %td= class_room_user.attendance
+                %td.action
+                  = link_to([:teacher, user], class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+                    %i.icon-zoom-in
+                  - if @class_room.teacher_id == current_teacher.id
+                    = link_to(edit_teacher_class_rooms_user_path(class_room_user), class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+                      %i.icon-pencil
+                  - else
+                    = link_to('#', class: 'btn btn-success disabled', toogle: 'tooltip', title: t('tooltips.zoom')) do
+                      %i.icon-pencil
+
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading
+        %i.icon-edit.icon-large
+        Dosyalar
+      .panel-body.grid
+        %table.table
+          %thead
+            %tr
+              -#%th #
+              %th= t('activerecord.attributes.attachment.title')
+              %th= t('activerecord.attributes.attachment.user')
+              %th= t('activerecord.attributes.attachment.created_at')
+
+              %th.actions
+
+          %tbody
+            - @class_room.attachments.each do |attachment|
+              %tr
+                %td= attachment.title
+                %td= attachment.user.name
+                %td= l attachment.created_at
+                %td.action
+                  = link_to attachment.file.url, class: 'btn btn-default' do
+                    %i.icon-download-alt

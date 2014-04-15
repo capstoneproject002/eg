@@ -1,0 +1,8 @@
+AWS:
+  S3:
+    bucket: eg-development
+    access_key_id: <%= ENV['aws_access_key_id'] %>
+    secret_access_key: <%= ENV['aws_secret_access_key'] %>
+    aws_url: http://eg-development.s3.amazonaws.com/
+    aws_raw_url: eg-development.s3.amazonaws.com
+    end_point: s3-eu-west-1.amazonaws.com

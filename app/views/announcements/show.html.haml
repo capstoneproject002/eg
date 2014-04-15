@@ -1,0 +1,17 @@
+- content_for :toolbar do
+  = link_to edit_announcement_path(@announcement ), class: 'btn btn-default' do
+    %i.icon-pencil
+    = t('action_button.edit')
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = t('tt.show', resource_name: Announcement.model_name.human)
+  .panel-body
+    = show_for @announcement do |s|
+      = s.attribute :title
+      = s.association :teacher
+      = s.attribute :created_at do
+        = l @announcement.created_at
+      = s.attribute :content
+
+    = link_to 'Duyuru Listesine Dön', announcements_path

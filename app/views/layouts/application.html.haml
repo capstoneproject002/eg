@@ -8,11 +8,13 @@
   %body
     .container-narrow
       .masthead
-        %ul.nav.nav-pills.pull-right
-          %li= link_to 'Öğretmen Girişi', new_teacher_session_path, active_wrapper: :li, active_on: /\/teachers/i
+        - if Rails.env.development?
+          %ul.nav.nav-pills.pull-right
 
-          %li= link_to 'Öğrenci Girişi', new_user_session_path, active_wrapper: :li, active_on: /\/users/i
-          %li= link_to 'Yönetici Girişi', new_admin_session_path
+            %li= link_to 'Öğretmen Girişi', new_teacher_session_path, active_wrapper: :li, active_on: /\/teachers/i
+
+            %li= link_to 'Öğrenci Girişi', new_user_session_path, active_wrapper: :li, active_on: /\/users/i
+            %li= link_to 'Yönetici Girişi', new_admin_session_path
         %h3.muted= link_to "Öğrenci Bilgi Sistemi", root_path
       %hr/
       = yield

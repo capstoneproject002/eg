@@ -1,5 +1,14 @@
 
 #### [Current]
+ * [ac98ca6](../../commit/ac98ca6) - __(Muhammet DİLEK)__ [#11](../../issues/11) teacher update student class room info
+ * [bf78079](../../commit/bf78079) - __(Muhammet DİLEK)__ [#10](../../issues/10) attachment
+ * [7f5197a](../../commit/7f5197a) - __(Muhammet DİLEK)__ [#12](../../issues/12) typo fix home page
+ * [bfa0b24](../../commit/bfa0b24) - __(Muhammet DİLEK)__ [#9](../../issues/9) teacher create announcement
+ * [9fc6566](../../commit/9fc6566) - __(Muhammet DİLEK)__ [#8](../../issues/8) admin send mail to student and teacher
+ * [d760d3c](../../commit/d760d3c) - __(Muhammet DİLEK)__ readme fixed
+
+#### 1.1.0
+ * [6a5ffba](../../commit/6a5ffba) - __(Muhammet DİLEK)__ bump version 1.1.0
  * [e95f1b8](../../commit/e95f1b8) - __(Muhammet DİLEK)__ [#6](../../issues/6) teacher calendar
  * [d910bf7](../../commit/d910bf7) - __(Muhammet DİLEK)__ [#7](../../issues/7) student see own class information
  * [2e50f26](../../commit/2e50f26) - __(Muhammet DİLEK)__ [#6](../../issues/6) teacher see class rooms

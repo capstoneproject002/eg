@@ -1,0 +1,8 @@
+.alert.alert-warning
+  %p
+  - if params[:q]
+    Hiç mesaj bulunamadı.
+    = link_to 'Listeye Dön', hq_messages_path
+  - else
+    Henüz hiç dönem eklenmemiş.
+    = link_to 'Yeni Mesaj', new_hq_message_path, class: 'btn btn-default'

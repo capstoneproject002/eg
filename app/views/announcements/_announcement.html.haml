@@ -1,0 +1,9 @@
+%tr
+  %td= announcement.id
+  %td= announcement.title
+  %td= announcement.teacher.name
+  %td= l announcement.created_at
+  %td.action
+    = link_to(announcement, class: 'btn btn-success btn-xs', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-zoom-in
+      Detay

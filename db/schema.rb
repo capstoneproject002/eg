@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140414144248) do
+ActiveRecord::Schema.define(version: 20140415102118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,31 @@ ActiveRecord::Schema.define(version: 20140414144248) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "announcements", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "teacher_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "announcements", ["teacher_id"], name: "index_announcements_on_teacher_id", using: :btree
+
+  create_table "attachments", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "class_room_id"
+    t.string   "title"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachments", ["class_room_id"], name: "index_attachments_on_class_room_id", using: :btree
+  add_index "attachments", ["user_id"], name: "index_attachments_on_user_id", using: :btree
 
   create_table "class_rooms", force: true do |t|
     t.integer  "teacher_id"
@@ -57,6 +82,14 @@ ActiveRecord::Schema.define(version: 20140414144248) do
 
   add_index "class_rooms_users", ["class_room_id"], name: "index_class_rooms_users_on_class_room_id", using: :btree
   add_index "class_rooms_users", ["user_id"], name: "index_class_rooms_users_on_user_id", using: :btree
+
+  create_table "messages", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "receiver"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "semesters", force: true do |t|
     t.string   "name"

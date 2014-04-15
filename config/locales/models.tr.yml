@@ -9,6 +9,10 @@ tr:
       semester: Semester
       class_room: Sınıf
       classroomsusers: Classroomsusers
+      message: Mesaj
+      announcement: Duyuru
+      attachment: Dosya
+      class_rooms_users: Öğrenci Sınıf Bilgisi
     attributes:
       user:
         id: Id
@@ -83,3 +87,36 @@ tr:
         gpa: Genel Ortalama
         attendance: Devamsızlık
         score: Not
+      class_rooms_users:
+        gpa: Genel Ortalama
+        attendance: Devamsızlık
+        score: Not
+      message:
+        id: Id
+        title: Başlık
+        content: İçerik
+        created_at: Oluşturulma Tarihi
+        updated_at: Updated_at
+        receiver: Alıcı
+      announcement:
+        id: Id
+        title: Başlık
+        content: İçerik
+        teacher_id: Öğretmen
+        teacher: Öğretmen
+        created_at: Oluşturulma Tarihi
+        updated_at: Updated_at
+      attachment:
+        id: Id
+        user_id: Öğrenci
+        user: Öğrenci
+        class_room_id: Sınıf
+        class_room: Sınıf
+        title: Başlık
+        file_file_name: File_file_name
+        file_content_type: File_content_type
+        file_file_size: File_file_size
+        file_updated_at: File_updated_at
+        created_at: Yüklenme Tarihi
+        updated_at: Updated_at
+        file: Dosya
