@@ -9,6 +9,7 @@ tr:
       semester: Semester
       class_room: Sınıf
       classroomsusers: Classroomsusers
+      message: Mesaj
     attributes:
       user:
         id: Id
@@ -83,3 +84,10 @@ tr:
         gpa: Genel Ortalama
         attendance: Devamsızlık
         score: Not
+      message:
+        id: Id
+        title: Başlık
+        content: İçerik
+        created_at: Oluşturulma Tarihi
+        updated_at: Updated_at
+        receiver: Alıcı

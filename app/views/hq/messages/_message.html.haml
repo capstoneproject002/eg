@@ -1,0 +1,9 @@
+%tr
+  %td= message.id
+  %td= message.title
+
+  %td.action
+    = link_to([:hq, message], class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-zoom-in
+    = link_to([:hq, message], class: 'btn btn-danger', method: :delete) do
+      %i.icon-trash

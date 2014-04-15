@@ -5,14 +5,17 @@
     %i.icon-dashboard
     =link_to t('dock.dashboard'), hq_dashboard_index_path
   %li.launcher
-    %i.icon-file-text-alt
+    %i.icon-user
     =link_to t('dock.users'), hq_users_path
   %li.launcher
-    %i.icon-file-text-alt
+    %i.icon-user
     =link_to t('dock.teachers'), hq_teachers_path
   %li.launcher
-    %i.icon-file-text-alt
+    %i.icon-calendar
     =link_to t('dock.semesters'), hq_semesters_path
   %li.launcher
     %i.icon-file-text-alt
     =link_to t('dock.class_rooms'), hq_class_rooms_path
+  %li.launcher
+    %i.icon-envelope
+    =link_to t('dock.messages'), hq_messages_path

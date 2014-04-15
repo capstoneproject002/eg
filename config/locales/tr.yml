@@ -35,9 +35,15 @@ tr:
     teachers: Öğretmenler
     semesters: Dönemler
     class_rooms: Sınıflar
+    messages: Mesajlar
 
   enumerize:
     semester:
       first: Birinci Dönem
       second: İkinci Dönem
       summer: Yaz Dönemi
+  enumerize:
+    receiver:
+      student: Öğrencilere
+      teacher: Öğretmenlere
+      both: Hem Öğrencilere Hem Öğretmenlere

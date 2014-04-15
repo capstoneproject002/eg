@@ -1,5 +1,4 @@
 Eg::Application.routes.draw do
-
   resources :class_rooms, only: [:show, :index]
 
   devise_for :teachers
@@ -23,6 +22,7 @@ Eg::Application.routes.draw do
     resources :teachers, except: [:destroy]
     resources :semesters
     resources :class_rooms
+    resources :messages
   end
 
   namespace :teacher do

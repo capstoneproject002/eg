@@ -1,0 +1,10 @@
+- content_for :toolbar do
+  = link_to new_hq_message_path, class: 'btn btn-default' do
+    %i.icon-plus
+    = t('action_button.new', resource_name: Message.model_name.human)
+
+.panel.panel-default.grid
+  =blankable(@messages)
+  .panel-footer
+    .pagination.pagination-sm
+      = will_paginate @messages, renderer: BootstrapPagination::Rails, bootstrap: 3
