@@ -1,0 +1,8 @@
+.alert.alert-warning
+  %p
+  - if params[:q]
+    Hiç duyuru bulunamadı.
+    = link_to 'Listeye Dön', teacher_class_rooms_path
+  - else
+    Henüz hiç duyuru eklenmemiş.
+    = link_to 'Duyuru Ekle', new_teacher_announcement_path, class: 'btn btn-default'

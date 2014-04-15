@@ -10,6 +10,7 @@ tr:
       class_room: Sınıf
       classroomsusers: Classroomsusers
       message: Mesaj
+      announcement: Duyuru
     attributes:
       user:
         id: Id
@@ -91,3 +92,11 @@ tr:
         created_at: Oluşturulma Tarihi
         updated_at: Updated_at
         receiver: Alıcı
+      announcement:
+        id: Id
+        title: Başlık
+        content: İçerik
+        teacher_id: Öğretmen
+        teacher: Öğretmen
+        created_at: Oluşturulma Tarihi
+        updated_at: Updated_at

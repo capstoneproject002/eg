@@ -36,6 +36,7 @@ tr:
     semesters: Dönemler
     class_rooms: Sınıflar
     messages: Mesajlar
+    announcements: Duyurular
 
   enumerize:
     semester:
