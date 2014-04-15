@@ -8,6 +8,7 @@ tr:
       teacher: Öğretmen
       semester: Semester
       class_room: Sınıf
+      classroomsusers: Classroomsusers
     attributes:
       user:
         id: Id
@@ -27,7 +28,6 @@ tr:
         updated_at: Updated_at
         time_zone: Time_zone
         remember_me: Beni Hatırla
-        password: Şifre
         password_confirmation: Şifre Tekrarı
       admin:
         id: Id
@@ -80,3 +80,6 @@ tr:
         created_at: Created_at
         updated_at: Updated_at
         users: Öğrenciler
+        gpa: Genel Ortalama
+        attendance: Devamsızlık
+        score: Not

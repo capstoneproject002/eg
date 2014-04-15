@@ -1,5 +1,10 @@
+require 'application_responder'
+
 class ApplicationController < ActionController::Base
   before_filter :set_user_time_zone
+
+  self.responder = ApplicationResponder
+  respond_to :html, :json
 
 
   # Prevent CSRF attacks by raising an exception.

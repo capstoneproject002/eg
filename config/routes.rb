@@ -1,5 +1,7 @@
 Eg::Application.routes.draw do
 
+  resources :class_rooms, only: [:show, :index]
+
   devise_for :teachers
   devise_for :admins, controllers: {sessions: 'hq/sessions'}, path: 'hq',
              path_names: {sign_in: 'login', sign_out: 'logout', password: 'secret',
