@@ -1,0 +1,18 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: Attachment.model_name.human)
+  .panel-tools
+
+.panel-body.filters
+
+%table.table
+  %thead
+    %tr
+      %th #
+      %th= t('activerecord.attributes.attachment.user')
+      %th= t('activerecord.attributes.attachment.class_room')
+      %th= t('activerecord.attributes.attachment.title')
+      %th.actions
+
+  %tbody
+    = render @attachments

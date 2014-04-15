@@ -1,6 +1,8 @@
 Eg::Application.routes.draw do
 
 
+  resources :attachments
+
   resources :class_rooms, only: [:show, :index]
 
   devise_for :teachers

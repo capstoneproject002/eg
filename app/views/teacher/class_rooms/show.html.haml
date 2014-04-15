@@ -26,3 +26,30 @@
 
           %tbody
             = render @class_room.users
+
+.row
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        %i.icon-edit.icon-large
+        Dosyalar
+      .panel-body.grid
+        %table.table
+          %thead
+            %tr
+              -#%th #
+              %th= t('activerecord.attributes.attachment.title')
+              %th= t('activerecord.attributes.attachment.user')
+              %th= t('activerecord.attributes.attachment.created_at')
+
+              %th.actions
+
+          %tbody
+            - @class_room.attachments.each do |attachment|
+              %tr
+                %td= attachment.title
+                %td= attachment.user.name
+                %td= l attachment.created_at
+                %td.action
+                  = link_to attachment.file.url, class: 'btn btn-default' do
+                    %i.icon-download-alt

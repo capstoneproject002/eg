@@ -1,0 +1,14 @@
+.pull-right
+  = link_to new_attachment_path, class: 'btn btn-default' do
+    %i.icon-plus
+    = t('action_button.new', resource_name: Attachment.model_name.human)
+
+.clearfix
+%hr
+
+
+.panel.panel-default.grid
+  =blankable(@attachments)
+  .panel-footer
+    .pagination.pagination-sm
+      = will_paginate @attachments, renderer: BootstrapPagination::Rails, bootstrap: 3

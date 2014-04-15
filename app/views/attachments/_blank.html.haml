@@ -1,0 +1,8 @@
+.alert.alert-warning
+  %p
+  - if params[:q]
+    Hiç öğrenci bulunamadı.
+    = link_to 'Listeye Dön', teacher_class_rooms_path
+  - else
+    Henüz hiç dosya eklenmemiş.
+    = link_to 'Dosya Ekle', new_attachment_path, class: 'btn btn-default'
