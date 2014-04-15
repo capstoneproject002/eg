@@ -1,5 +1,9 @@
 
 #### [Current]
+ * [3c18331](../../commit/3c18331) - __(Muhammet DİLEK)__ hot fix
+
+#### 1.2.0
+ * [689e96f](../../commit/689e96f) - __(Muhammet DİLEK)__ bump version 1.2.0
  * [ac98ca6](../../commit/ac98ca6) - __(Muhammet DİLEK)__ [#11](../../issues/11) teacher update student class room info
  * [bf78079](../../commit/bf78079) - __(Muhammet DİLEK)__ [#10](../../issues/10) attachment
  * [7f5197a](../../commit/7f5197a) - __(Muhammet DİLEK)__ [#12](../../issues/12) typo fix home page
