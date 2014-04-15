@@ -1,5 +1,9 @@
 
 #### [Current]
+ * [3882d19](../../commit/3882d19) - __(Muhammet DİLEK)__ list bug fixed
+
+#### 1.2.1
+ * [f243dc1](../../commit/f243dc1) - __(Muhammet DİLEK)__ bump version 1.2.1
  * [3c18331](../../commit/3c18331) - __(Muhammet DİLEK)__ hot fix
 
 #### 1.2.0
