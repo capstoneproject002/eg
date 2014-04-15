@@ -1,4 +1,8 @@
 Eg::Application.routes.draw do
+
+  resources :class_rooms, only: [:show, :index]
+
+  devise_for :teachers
   devise_for :admins, controllers: {sessions: 'hq/sessions'}, path: 'hq',
              path_names: {sign_in: 'login', sign_out: 'logout', password: 'secret',
                           confirmation: 'verification'}
@@ -16,6 +20,15 @@ Eg::Application.routes.draw do
     resources :dashboard, only: [:index]
     root to: 'dashboard#index'
     resources :users, except: [:destroy]
+    resources :teachers, except: [:destroy]
+    resources :semesters
+    resources :class_rooms
+  end
+
+  namespace :teacher do
+    resources :dashboard, only: [:index]
+    resources :class_rooms, only: [:show, :index]
+    resources :users, only: [:show, :index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

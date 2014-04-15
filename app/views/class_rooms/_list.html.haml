@@ -1,0 +1,18 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: ClassRoom.model_name.human)
+  .panel-tools
+
+.panel-body.filters
+
+%table.table
+  %thead
+    %tr
+      %th #
+      %th= t('activerecord.attributes.class_room.name')
+      %th= t('activerecord.attributes.class_room.teacher')
+      %th= t('activerecord.attributes.class_room.semester')
+      %th.actions
+
+  %tbody
+    = render @class_rooms

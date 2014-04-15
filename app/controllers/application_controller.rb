@@ -1,5 +1,10 @@
+require 'application_responder'
+
 class ApplicationController < ActionController::Base
   before_filter :set_user_time_zone
+
+  self.responder = ApplicationResponder
+  respond_to :html, :json
 
 
   # Prevent CSRF attacks by raising an exception.
@@ -17,6 +22,18 @@ class ApplicationController < ActionController::Base
       User::ParameterSanitizer.new(User, :user, params)
     else
       super # Use the default one
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    if resource.class.name == 'User'
+      super
+    elsif resource.class.name == 'Admin'
+      hq_dashboard_index_path
+    elsif resource.class.name == 'Teacher'
+      teacher_dashboard_index_path
+    else
+      super
     end
   end
 

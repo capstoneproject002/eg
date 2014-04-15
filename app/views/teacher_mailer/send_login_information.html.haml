@@ -1,0 +1,13 @@
+%h2= "#{@teacher.name} Merhabalar;"
+
+%p Öğrenci Bilgi Sistemi Giriş Bilgileriniz Aşağıdadır.
+%p
+  %strong Eposta:
+  = @teacher.email
+%p
+  %strong Şifre
+  = @password
+
+%p= link_to 'Buradan Giriş Yapabilirsiniz', new_teacher_session_url
+
+%p Başarılar Dileriz.

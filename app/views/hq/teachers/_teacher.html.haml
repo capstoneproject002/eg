@@ -1,0 +1,9 @@
+%tr
+  %td= teacher.name
+  %td= teacher.email
+  %td= l teacher.created_at
+  %td.action
+    = link_to([:hq, teacher], class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-zoom-in
+    = link_to(edit_hq_teacher_path(teacher), class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-pencil

@@ -1,0 +1,21 @@
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: User.model_name.human)
+  .panel-tools
+    .btn-group
+      %a.btn{href: hq_users_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+        %i.icon-refresh
+    .badge= @users.total_entries
+.panel-body.filters
+  -#= render 'filters'
+%table.table
+  %thead
+    %tr
+      -#%th #
+      %th= t('activerecord.attributes.user.name')
+      %th= t('activerecord.attributes.user.email')
+      %th= t('activerecord.attributes.user.created_at')
+      %th.actions
+
+  %tbody
+    = render @users

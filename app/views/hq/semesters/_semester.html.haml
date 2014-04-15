@@ -1,0 +1,12 @@
+%tr
+  %td= semester.id
+  %td= semester.name
+  %td= semester.year
+  %td= semester.semester
+  %td.action
+    = link_to([:hq, semester], class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-zoom-in
+    = link_to(edit_hq_semester_path(semester) , class: 'btn btn-info') do
+      %i.icon-edit
+    = link_to([:hq, semester], class: 'btn btn-danger', method: :delete) do
+      %i.icon-trash

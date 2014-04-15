@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   before_create :set_password
 
+  has_and_belongs_to_many :class_rooms
+
   def set_password
     if Rails.env.production?
       generated_password = Devise.friendly_token.first(8)

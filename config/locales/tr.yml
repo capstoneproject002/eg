@@ -32,3 +32,12 @@ tr:
   dock:
     users: Öğrenciler
     dashboard: Pano
+    teachers: Öğretmenler
+    semesters: Dönemler
+    class_rooms: Sınıflar
+
+  enumerize:
+    semester:
+      first: Birinci Dönem
+      second: İkinci Dönem
+      summer: Yaz Dönemi

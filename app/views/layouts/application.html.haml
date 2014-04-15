@@ -2,20 +2,20 @@
 %html
   %head
     %title eg
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     .container-narrow
       .masthead
         %ul.nav.nav-pills.pull-right
-          %li.active
-            %a{:href => "/"} Home
-          %li
-            %a{:href => "/rails/routes"} Routes
-        %h3.muted= link_to "eg", root_path
+          %li= link_to 'Öğretmen Girişi', new_teacher_session_path, active_wrapper: :li, active_on: /\/teachers/i
+
+          %li= link_to 'Öğrenci Girişi', new_user_session_path, active_wrapper: :li, active_on: /\/users/i
+          %li= link_to 'Yönetici Girişi', new_admin_session_path
+        %h3.muted= link_to "Öğrenci Bilgi Sistemi", root_path
       %hr/
       = yield
       %hr/
       .footer
-        %p © Company 2013
+        %p © Öğrenci Bilgi sistemi 2014

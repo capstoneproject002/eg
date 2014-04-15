@@ -1,0 +1,28 @@
+.row
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        %i.icon-edit.icon-large
+        = t('tt.show', resource_name: ClassRoom.model_name.human)
+      .panel-body
+        = show_for @class_room do |s|
+          = s.association :teacher
+          = s.association :semester
+          = s.attribute :name
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        %i.icon-edit.icon-large
+        Öğrenciler
+      .panel-body.grid
+        %table.table
+          %thead
+            %tr
+              -#%th #
+              %th= t('activerecord.attributes.user.name')
+              %th= t('activerecord.attributes.user.email')
+              %th= t('activerecord.attributes.user.created_at')
+              %th.actions
+
+          %tbody
+            = render @class_room.users

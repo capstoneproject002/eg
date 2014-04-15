@@ -1,0 +1,7 @@
+%tr
+  %td= user.name
+  %td= user.email
+  %td= l user.created_at
+  %td.action
+    = link_to([:teacher, user], class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+      %i.icon-zoom-in

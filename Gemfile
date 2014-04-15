@@ -6,7 +6,6 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.0.4'
-gem 'turbolinks', '~> 1.3.0'
 gem 'haml', '~> 4.0.2'
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.0.3.0'
@@ -60,3 +59,6 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
+gem 'enumerize'
+gem 'select2-rails'
+gem 'link_to_active_state'
