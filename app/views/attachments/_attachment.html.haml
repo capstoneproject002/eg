@@ -1,7 +1,7 @@
 %tr
   %td= attachment.id
-  %td= attachment.title
   %td= attachment.user.name
+  %td= attachment.title
   %td= attachment.class_room.name
   %td.action
     = link_to(attachment, class: 'btn btn-success btn-xs', toogle: 'tooltip', title: t('tooltips.zoom')) do
