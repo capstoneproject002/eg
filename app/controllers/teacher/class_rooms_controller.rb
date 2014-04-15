@@ -3,7 +3,12 @@ class Teacher::ClassRoomsController < TeacherBaseController
   before_action :set_class_room, only: [:show, :edit, :update, :destroy]
   add_breadcrumb I18n.t('dock.class_rooms'), :teacher_class_rooms_path
   def index
-    @search = ClassRoom.search(params[:q])
+    if params[:own_class_room].present?
+      @search = current_teacher.class_rooms.search(params[:q])
+    else
+      @search = ClassRoom.search(params[:q])
+    end
+
      @class_rooms = @search.result(:distinct => true).paginate(:page => params[:page])
      respond_with(@class_rooms)
   end

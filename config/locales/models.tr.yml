@@ -12,6 +12,7 @@ tr:
       message: Mesaj
       announcement: Duyuru
       attachment: Dosya
+      class_rooms_users: Öğrenci Sınıf Bilgisi
     attributes:
       user:
         id: Id
@@ -83,6 +84,10 @@ tr:
         created_at: Created_at
         updated_at: Updated_at
         users: Öğrenciler
+        gpa: Genel Ortalama
+        attendance: Devamsızlık
+        score: Not
+      class_rooms_users:
         gpa: Genel Ortalama
         attendance: Devamsızlık
         score: Not

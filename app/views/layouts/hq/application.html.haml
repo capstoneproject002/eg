@@ -46,6 +46,16 @@
 
       / Content
       #content
+        - if flash.count > 0
+          .row-fluid
+            - flash.each do |name, msg|
+              - if name.to_s == 'alert'
+                - name = 'info'
+              - elsif name.to_s == 'notice'
+                - name = 'success'
+              %div{class: "alert alert-#{name}"}
+                %a.close{data: {dismiss: 'alert'}, href: '#'} &times;
+                = content_tag :div, msg, id: "flash_#{name}" if msg.is_a?(String)
         = yield
 
     / Footer

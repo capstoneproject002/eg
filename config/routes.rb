@@ -33,6 +33,7 @@ Eg::Application.routes.draw do
   namespace :teacher do
     resources :dashboard, only: [:index]
     resources :class_rooms, only: [:show, :index]
+    resources :class_rooms_users, only: [:edit, :update]
     resources :users, only: [:show, :index]
     resources :announcements
   end

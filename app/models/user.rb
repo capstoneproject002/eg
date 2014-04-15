@@ -23,4 +23,8 @@ class User < ActiveRecord::Base
     end
     self.password = generated_password
   end
+
+  def class_room_user_by_class_room(class_room)
+    ClassRoomsUsers.where("user_id = ? AND class_room_id = ?", self.id, class_room.id).first
+  end
 end

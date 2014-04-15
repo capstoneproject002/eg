@@ -1,3 +1,12 @@
+- content_for :toolbar do
+  - if params[:own_class_room].present?
+    = link_to teacher_class_rooms_path, class: 'btn btn-default' do
+      %i.icon-list
+      Tüm Sınıflar
+  - else
+    = link_to teacher_class_rooms_path(own_class_room: true), class: 'btn btn-default' do
+      %i.icon-list
+      Kendi Sınıflarım
 .panel.panel-default.grid
   =blankable(@class_rooms)
   .panel-footer
