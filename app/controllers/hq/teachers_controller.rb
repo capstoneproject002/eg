@@ -39,6 +39,6 @@ class Hq::TeachersController < Hq::ApplicationController
   end
 
   def teacher_params
-    params.require(:teacher).permit(:email, :name)
+    params.require(:teacher).permit(:email, :name, :calendar)
   end
 end

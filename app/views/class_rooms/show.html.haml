@@ -17,3 +17,11 @@
             = @student.attendance
 
         = link_to 'Sınıf listesine dön', class_rooms_path
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading
+        %i.icon-edit.icon-large
+        Öğretmenin Takvimi
+      .panel-body
+        = @class_room.teacher.calendar.html_safe if @class_room.teacher.calendar.present?

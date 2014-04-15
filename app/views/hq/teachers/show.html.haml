@@ -12,6 +12,9 @@
         = show_for @teacher do |s|
           = s.attribute :email
           = s.attribute :name
+          - if @teacher.calendar.present?
+            = s.attribute :calendar do
+              = @teacher.calendar.html_safe
   .col-md-6
     .panel.panel-default.grid
       .panel-heading
