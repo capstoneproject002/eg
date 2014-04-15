@@ -1,5 +1,6 @@
 .jumbotron
-  %h1 Yeni Teknolojilerle Paha Biçilemez Sistemler
+  %h1 Öğrenci Bilgi Sistemi
   - if current_user.present?
     = link_to 'Sınıflarım', class_rooms_path, class: 'btn btn-primary btn-lg'
     = link_to 'Duyurular', announcements_path, class: 'btn btn-primary btn-lg'
+    = link_to 'Çıkış', destroy_user_session_path, class: 'btn btn-danger btn-lg', method: :delete
