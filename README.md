@@ -11,3 +11,8 @@
 * student@student.com
 * 7nyawQwF
 
+### Öğretmen Giriş Bilgileri
+* [http://agile-thicket-8353.herokuapp.com/teachers/sign_in](http://agile-thicket-8353.herokuapp.com/teachers/sign_in)
+* teacher@teacher.com
+* o5xgShTb
+
